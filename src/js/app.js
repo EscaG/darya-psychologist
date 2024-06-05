@@ -1,16 +1,27 @@
 import * as flsGuru from "./modules/functions.js";
-// core version + navigation, pagination modules:
-// import Swiper from 'swiper';
-// import { Navigation, Pagination } from 'swiper/modules';
-// import Swiper and modules styles
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
+import { addClassActive, handlerCloseMenu, removeClassActive } from "./modules/burger.js";
+import { headerScrollAnimation } from "./modules/headerScrollAnimation.js";
 
-flsGuru.isWebp();
+window.onload = function () {
+	flsGuru.isWebp();
+	headerScrollAnimation();
 
-// init Swiper:
-// const swiper = new Swiper('.swiper', {
-// modules: [Navigation, Pagination],
-// });
+	const burger = document.getElementById("burger");
+
+
+	burger.onclick = () => {
+		if (burger.classList.contains('active')) {
+			removeClassActive();
+		} else {
+			addClassActive();
+		}
+	}
+
+	document.addEventListener('click', handlerCloseMenu);
+
+
+}
+
+
+
 
