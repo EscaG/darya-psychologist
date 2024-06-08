@@ -1,7 +1,16 @@
 @import "fonts";
 @import "reset";
+@import "header";
+@import "main";
 
 body {
+	color: rgb(26, 17, 10);
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -11,16 +20,12 @@ body {
 	height: 100%;
 	min-height: 100vh;
 	scroll-behavior: smooth;
-	max-width: 1440px;
+	background-color: rgb(232, 220, 208);
+	padding-top: 130px;
 }
 
 main {
 	flex: 1 1 auto;
-}
-
-header {
-	height: 50px;
-	background-color: #26aa3c;
 }
 
 footer {
@@ -32,4 +37,23 @@ footer {
 	font-family: CormorantUpright;
 	font-size: 30px;
 	font-weight: 400;
+}
+
+[class*="__container"] {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.header__container {
+	padding: 0;
+}
+
+a {
+	color: rgb(125, 110, 91);
+}
+
+@media (max-width: 900px) {
+	.wrapper {
+		padding-top: 90px;
+	}
 }
