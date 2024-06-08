@@ -2,6 +2,7 @@
 @import "reset";
 @import "header";
 @import "main";
+@import "footer";
 
 body {
 	color: rgb(26, 17, 10);
@@ -26,11 +27,6 @@ body {
 
 main {
 	flex: 1 1 auto;
-}
-
-footer {
-	height: 50px;
-	background-color: #b81e1e;
 }
 
 .lorem {
