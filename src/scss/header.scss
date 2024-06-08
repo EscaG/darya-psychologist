@@ -139,9 +139,11 @@
 	.wrapper-social {
 		overflow: hidden;
 	}
-	.social {
+	.header .social {
 		&__link {
 			display: inline-block;
+			width: 32px;
+			height: 32px;
 			svg {
 				transition: 0.4s;
 				fill: rgb(26, 17, 10);
