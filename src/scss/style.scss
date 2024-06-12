@@ -1,5 +1,6 @@
 @import "fonts";
 @import "reset";
+@import "shared";
 @import "header";
 @import "main";
 @import "footer";
@@ -9,6 +10,19 @@ body {
 	&.lock {
 		overflow: hidden;
 	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: "TenorSans", sans-serif;
+}
+
+h2 {
+	font-size: 40px;
+	margin-bottom: 30px;
 }
 
 .wrapper {
@@ -22,21 +36,15 @@ body {
 	min-height: 100vh;
 	scroll-behavior: smooth;
 	background-color: rgb(232, 220, 208);
-	padding-top: 130px;
+	padding-top: 120px;
 }
 
 main {
 	flex: 1 1 auto;
 }
 
-.lorem {
-	font-family: CormorantUpright;
-	font-size: 30px;
-	font-weight: 400;
-}
-
 [class*="__container"] {
-	max-width: 1440px;
+	max-width: 1280px;
 	margin: 0 auto;
 	padding: 0 20px;
 }

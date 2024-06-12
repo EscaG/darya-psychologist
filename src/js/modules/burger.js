@@ -9,13 +9,11 @@ export function addClassActive() {
 	burger.classList.add("active");
 	menu.classList.add("active");
 	menu.classList.add("animate");
-	body.classList.add("lock");
 }
 export function removeClassActive() {
 	burger.classList.remove("active");
 	menu.classList.remove("active");
 	menu.classList.remove("animate");
-	body.classList.remove("lock");
 }
 
 
