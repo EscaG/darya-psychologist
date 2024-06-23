@@ -34,4 +34,7 @@ export function handlerCloseMenu({ target }) {
 	if (menuIsActive && (!headerBody.contains(target) || isItemLink)) {
 		removeClassActive();
 	}
+	return () => {
+		document.removeEventListener('click', handlerCloseMenu);
+	}
 }

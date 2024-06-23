@@ -25,14 +25,15 @@ export const scss = () => {
 				app.isProd,
 				groupCssMediaQueries())
 		)
-		.pipe(
-			app.plugins.gulpIf(
-				app.isProd,
-				gulpWebpcss({
-					webpClass: ".webp",
-					noWebpClass: ".no-webp",
-				}))
-		)
+		// Включение плагина, который переписывает стили background-image если браузер поддерживает webp формат
+		// .pipe(
+		// 	app.plugins.gulpIf(
+		// 		app.isProd,
+		// 		gulpWebpcss({
+		// 			webpClass: ".webp",
+		// 			noWebpClass: ".no-webp",
+		// 		}))
+		// )
 		.pipe(
 			app.plugins.gulpIf(
 				app.isProd,
@@ -43,7 +44,7 @@ export const scss = () => {
 				}))
 		)
 		// Раскомментировать если нужен не сжатый дубль файла стилей
-		.pipe(app.gulp.dest(app.path.build.css))
+		// .pipe(app.gulp.dest(app.path.build.css))
 		.pipe(
 			app.plugins.gulpIf(
 				app.isProd,
