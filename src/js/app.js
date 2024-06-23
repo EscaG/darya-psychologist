@@ -9,6 +9,11 @@ window.onload = function () {
 	flsGuru.isWebp();
 	headerScrollAnimation();
 
+	// document.documentElement.scrollTo({
+	// 	top: 0,
+	// 	behavior: "smooth"
+	// });
+
 	const burger = document.getElementById("burger");
 
 	document.addEventListener('click', handlerCloseMenu);
@@ -20,8 +25,6 @@ window.onload = function () {
 			addClassActive();
 		}
 	}
-
-
 
 	readMore();
 
